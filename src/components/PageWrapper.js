@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export default styled.div`
+const StyledPageWrapper = styled.div`
   width: 100vw;
   height: 100vh;
 `;
+
+export default StyledPageWrapper;

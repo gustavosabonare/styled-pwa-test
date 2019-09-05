@@ -14,13 +14,11 @@ const StyledApp = styled.div`
   justify-content: center;
 `;
 
-const StyledRedTitle = styled(Title)``;
-
 const App = () => (
   <PageWrapper>
     <StyledApp>
       <Loading isActive>
-        <StyledRedTitle>Hello World <small>with loading</small></StyledRedTitle>
+        <Title>Hello World <small>with loading</small></Title>
       </Loading>
     </StyledApp>
   </PageWrapper>
