@@ -1,5 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const srcDir = path.resolve(__dirname, 'src');
 
@@ -19,6 +20,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: path.join(srcDir, 'index.html') })
+    new HtmlWebpackPlugin({ template: path.join(srcDir, 'index.html') }),
+    new CopyWebpackPlugin(['src/sw.js', { from: 'src/assets/', to: 'assets/'}, 'src/manifest.json']),
   ]
 }
